@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Text.Json.Serialization;
 
 namespace CleanArchitecture.Models
 {
@@ -9,6 +10,7 @@ namespace CleanArchitecture.Models
         public string Description { get; set; }
         public decimal Price { get; set; }
         public int CategoryId { get; set; }
+        [JsonIgnore]
         public Categories Category { get; set; }
     }
 }
